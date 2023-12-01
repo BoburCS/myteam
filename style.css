@@ -1,0 +1,413 @@
+/* Global Variables */
+:root {
+    /* Colors */
+    --header-color: #014E56;
+    --main-color: #004047;
+    --section-color: #012F34;
+    --footer-first-color: #F67E7E;
+    --footer-second-color: #002529;
+    --text-color: #FFF;
+
+    /* Font Family */
+    --ff: 'Livvic', sans-serif;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Livvic', sans-serif;
+    font-style: normal;
+}
+
+/* Header */
+header {
+    padding: 77px 165px;
+    background-color: #014E56;
+}
+
+/* Header - Navigation Bar */
+header nav {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    width: 160px;
+    height: 40px;
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.nav-links button {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    width: 153px;
+    height: 48px;
+    border: 2px solid var(--text-color);
+    border-radius: 24px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-links button:hover {
+    color: var(--header-color);
+    border: 2px solid var(--header-color);
+    background-color: var(--text-color);
+}
+
+nav .icon-menu-bar {
+    display: none;
+}
+
+/* Header - About */
+header .about {
+    color: var(--text-color);
+    padding: 120px 0;
+    display: flex;
+    gap: 30px;
+}
+
+.about h1 {
+    width: 350px;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 100px;
+}
+
+.about p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-top: 44px;
+    flex: 1;
+}
+
+/* Main */
+main {
+    color: var(--text-color);
+    background-color: var(--main-color);
+}
+
+/* Section - Directors */
+main .directors {
+    padding: 70px 165px 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.directors h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.directors .directors-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.directors-container .directors-cards {
+    padding: 44px 0 60px;
+    background-color: var(--section-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.directors-cards > img {
+    width: 96px;
+    height: 96px;
+}
+
+.directors-cards .text h3 {
+    color: #79C8C7;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.directors-cards .text span {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 25px;
+}
+
+.directors-cards button {
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: var(--footer-first-color);
+    position: absolute;
+    bottom: -20px;
+    cursor: pointer;
+}
+
+/* Section - Clients */
+main .clients {
+    color: var(--text-color);
+    padding: 120px 165px;
+    background-color: var(--section-color);
+}
+
+.clients h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    margin-bottom: 56px;
+}
+
+.clients .clients-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* Section - Contact Us */
+main .contact-us {
+    color: var(--footer-second-color);
+    padding: 76px 260px;
+    background-color: var(--footer-first-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-us h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.contact-us button {
+    color: var(--footer-second-color);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    width: 153px;
+    height: 48px;
+    border: 2px solid var(--footer-second-color);
+    border-radius: 24px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.contact-us button:hover {
+    color: var(--footer-first-color);
+    border: 2px solid var(--footer-first-color);
+    background-color: var(--footer-second-color);
+}
+
+/* Footer */
+footer {
+    color: var(--text-color);
+    padding: 48px 165px 24px;
+    background-color: var(--footer-second-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 767px) {
+    /* Header */
+    header {
+        padding: 48px 24px;
+    }
+    /* Header - Navigation Bar */
+    nav .logo {
+        width: 128px;
+        height: 32px;
+    }
+    nav .nav-links {
+        display: none;
+    }
+    nav .icon-menu-bar {
+        display: inline-block;
+    }
+    /* Header - About */
+    header .about {
+        padding: 100px 0;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .about h1 {
+        text-align: center;
+        font-size: 40px;
+        line-height: 40px;
+        width: 100%;
+    }
+    .about p {
+        text-align: center;
+        font-size: 15px;
+        margin-top: 0;
+    }
+    /* Main */
+    /* Section - Directors */
+    main .directors {
+        padding: 88px 24px;
+        gap: 48px;
+    }
+    .directors h1 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .directors .directors-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+    /* Section - Clients */
+    main .clients {
+        padding: 72px 24px;
+    }
+    .clients h1 {
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 52px;
+    }
+    .clients .clients-container {
+        flex-direction: column;
+        gap: 45px;
+    }
+    .clients-container img {
+        height: 20px;
+    }
+    /* Section - Contact Us */
+    main .contact-us {
+        padding: 83px 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .contact-us h1 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    /* Footer */
+    footer {
+        padding: 68px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+    }
+    footer > img {
+        width: 96px;
+        height: 24px;
+    }
+}
+
+/* Tablet Responsiveness */
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    /* Header */
+    header {
+        padding: 64px 40px;
+    }
+    /* Header - Navigation Bar */
+    nav .logo {
+        width: 128px;
+        height: 32px;
+    }
+    /* Header - About */
+    header .about {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .about h1 {
+        text-align: center;
+        line-height: 56px;
+        width: 100%;
+    }
+    .about p {
+        text-align: center;
+        font-size: 15px;
+        margin-top: 0;
+    }
+    /* Main */
+    /* Section - Directors */
+    main .directors {
+        padding: 100px 40px;
+        gap: 48px;
+    }
+    .directors h1 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .directors .directors-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    /* Section - Clients */
+    main .clients {
+        padding: 100px 48px;
+    }
+    .clients h1 {
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 52px;
+    }
+    .clients .clients-container {
+        gap: 30px;
+    }
+    .clients-container img {
+        height: 18px;
+    }
+    /* Section - Contact Us */
+    main .contact-us {
+        padding: 84px 97px;
+    }
+    .contact-us h1 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    /* Footer */
+    footer {
+        padding: 40px;
+    }
+}
+
+
+
+
+
+
